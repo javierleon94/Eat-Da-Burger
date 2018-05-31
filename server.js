@@ -5,12 +5,12 @@ var methodOverride = require('method-override');
 var app = express();
 //app.use(express.static(__dirname + '/public'));
 
-var PORT = process.env.PORT || 8090;
+var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({extended: false}));
  
 // override with POST having ?_method=DELETE
-app.use(methodOverride('_method'))
+// app.use(methodOverride('_method'))
 
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
